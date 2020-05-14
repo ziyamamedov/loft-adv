@@ -1,0 +1,9 @@
+include ../mixins.pug
+
+header.header
+  .header__logo
+    .logo= 'ЗМ'
+  .header__menu
+    +navigation('Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться')
+  .header__socials  
+    +socials('socials', 'insta', 'vk', 'github')
