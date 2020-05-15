@@ -1,12 +1,26 @@
 .user {
-  padding: 4.375rem 0 12.5rem 0;
-
+  min-height: 650px;
   color:white;
-  background: url('~images/content/numbers-dark.jpg') center center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+ 
+}
+
+//Left column styles
+.user__col-left {
+  margin-right: 13vw;
+}
+.user__avatar-wrapper {
+  margin-bottom: 76px;
   display: flex;
   justify-content: center;
 }
-
 .user__avatar {
   display: block;
   width: 200px;
@@ -16,5 +30,42 @@
 }
 .user__info {
   display: flex;
+}
+.user__info-table {
+  font-weight: 600;
+}
+.user__info-col-one, .user__info-col-two {
+  padding: 7px 0;
+}
+.user__info-col-one {
+  opacity: .15;
+}
+.user__info-col-two {
+  min-width: 200px;
+  padding-left: 20%;
+}
+
+//Right column styles 
+.user__col-right {
+  max-width: 550px;
+  
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 600;
+  color: $text-color;
+  
+  .section-title {
+    color: white;
+    margin-bottom: 30px;
+  }
+}
+.user__greetings {
+  margin-bottom: 22px;
+}
+.user__about-site {
+  font-weight: normal;
+  font-style: italic;
+  margin-top: auto;
 }
 

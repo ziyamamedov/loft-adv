@@ -10,7 +10,9 @@ body,
 html {
   height: 100%;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
@@ -36,6 +38,16 @@ body {
 
   @include phones {
     width: 85%;
+  }
+}
+section {
+  min-height: 650px;
+}
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  &--black {
+    color: black;
   }
 }
 

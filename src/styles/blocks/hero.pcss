@@ -1,7 +1,9 @@
-
+.welcome {
+  background: url('~images/content/welcome-bg.jpg') center center / cover no-repeat;
+}
 .hero {
-  background: url('~images/content/train-bridge.jpg') center center / cover no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
@@ -9,7 +11,6 @@
   .container {
     position: relative;
   }
-  
 }
 
 .hero__content {
@@ -48,6 +49,14 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
+  
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:active {
+    color: $active-color;
+  }
 }
 .scrolldown__text {
   margin-right: 1.3125rem;
@@ -55,5 +64,5 @@
 .scrolldown__icon {
   width: 1.875rem;
   height: 1.875rem;
-  fill: white;
+  fill: currentColor;
 }

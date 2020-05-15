@@ -1,0 +1,18 @@
+section.works
+  .container
+    h2.section-title.section-title--black Мои работы
+    .works__content
+      .works__slider-wrapper
+        ul.works__slider
+          li.works__slide.works__slide--active.work
+            .work__preview
+              +image("content/work-previews/1.jpg", "work__preview-img")
+            .work__descr
+              ul.work__tools
+                - var workTools = ["HTML", "CSS", "Javascript"];
+                each tool in workTools
+                  li.work__tools-item 
+                    h4 #{tool}
+                    
+
+

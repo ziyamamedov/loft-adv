@@ -12,28 +12,29 @@
           +icon('scroll', 'scrolldown__icon')
         
     section.user
-      
-      .user__col
-        .user__avatar
-          +image('content/user.jpg', 'user__avatar-img')
-        .user__info
-          - 
-            var userInfo = [
-              ["Проживаю", "Тула"],
-              ["Возраст", "29 лет"],
-              ["Родился", "24 июня 1990"]
-            ]
-          table.user__info-table
-            each row in userInfo
-              tr.user__info-row
-                td #{row[0]}
-                td #{row[1]}
+      .container
+        .user__col-left
+          .user__avatar-wrapper
+            .user__avatar
+              +image('content/user.jpg', 'user__avatar-img')
+          .user__info
+            - 
+              var userInfo = [
+                ["Проживаю", "Тула"],
+                ["Возраст", "29 лет"],
+                ["Родился", "24 июня 1990"]
+              ]
+            table.user__info-table
+              each row in userInfo
+                tr.user__info-row
+                  td.user__info-col-one #{row[0]}:
+                  td.user__info-col-two #{row[1]}
 
-      .user__col
-        .user__greetings= 'Привет, меня зовут'
-        h2.section-title= 'Зия Мамедов'
-        .user__what-i-do
-          p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-        .user__about-site 
-          p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .user__col-right
+          .user__greetings= 'Привет, меня зовут'
+          h2.section-title= 'Зия Мамедов'
+          .user__what-i-do
+            p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+          .user__about-site 
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         

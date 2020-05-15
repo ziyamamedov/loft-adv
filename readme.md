@@ -1,13 +1,15 @@
-# Учебный шаблон проекта Portfolio
+# Учебный проект Portfolio школы Loft-School
+
+# Мамедов Зия
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же 
 [последняя версия Yarn](https://yarnpkg.com/ru/docs/install)
 
 ##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone git@github.com:loftschool/ls-advanced-portfolio.git
+$ git clone https://github.com/ziyamamedov/loft-adv.git
 $ cd ls-advanced-portfolio
-$ yarn
+$ npm install
 ```
 
 ## Скрипты package.json:

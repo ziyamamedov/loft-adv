@@ -37,11 +37,20 @@
   &:last-child {
     margin-right: 0;
   }
+  
   &:hover {
     color: $hover-color;
     
     &:after {
       background-color: $hover-color;
+    }
+  }
+
+  &:active {
+    color: $active-color;
+    
+    &:after {
+      background-color: $active-color;
     }
   }
 }
@@ -66,5 +75,8 @@
 
   &:hover {
     fill: $hover-color;
+  }
+  &:active {
+    fill: $active-color;
   }
 }
