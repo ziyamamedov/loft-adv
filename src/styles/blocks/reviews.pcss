@@ -39,6 +39,7 @@
   transform: translateX(-50%);
 
   display: flex;
+  
 }
 .reviews__buttons-left, .reviews__buttons-right {
   display: flex;
@@ -46,7 +47,11 @@
   align-items: center;
   color: white;
   @include circle(50px, 50px);
-  border: 1px solid white;
+  border: 1px solid currentColor;
+
+  &:hover {
+    color: $hover-color;
+  }
 }
 .reviews__buttons-svg {
   height: 12px;
