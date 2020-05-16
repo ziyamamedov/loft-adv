@@ -1,0 +1,44 @@
+.nav__list {
+  display: flex;
+}
+.nav__item {
+  margin-right: 3.75rem;
+  transition: color .2s;
+  height: 6.75rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 150%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: -25%;
+    
+    transition: background-color .2s
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  
+  &:hover {
+    color: $hover-color;
+    
+    &:after {
+      background-color: $hover-color;
+    }
+  }
+
+  &:active {
+    color: $active-color;
+    
+    &:after {
+      background-color: $active-color;
+    }
+  }
+}

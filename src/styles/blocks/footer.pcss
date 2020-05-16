@@ -1,0 +1,94 @@
+.footer {
+  background: #222427;
+  color: white;
+  .container {
+    padding: 80px 0;
+    display: flex;
+  }
+  &__left{
+    margin-right: 7.8vw;
+  }
+  &__right {
+    flex: 1;
+    padding-top: 12px;
+  }
+  .nav {
+    margin-bottom: 25px;
+  }
+  .nav__item {
+    height: 50px;
+    align-items: flex-start;
+  }
+
+  .socials__link {
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+  }
+}
+
+
+.copyright {
+  display: flex;
+  @include desktop() {
+    flex-direction: column;
+  }
+}
+.copyight__year {
+  font-size: 48px;
+  font-weight: 600;
+  color: $text-color;
+  margin-right: 3.4vw;
+  @include desktop() {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
+.copyright__info {
+  padding-top: 20px;
+  @include desktop() {
+    padding-top: 0;
+  }
+}
+.copyright__author {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.copyright__descr {
+  color: $text-color;
+}
+
+.footer__row {
+  display: flex;
+  width: 100%;
+}
+.footer__col {
+  margin-right: 10.5vw;
+  color: $text-color;
+  &:last-child {
+    margin-right: 0;  
+  }
+  &--left {
+    max-width: 315px;
+  }
+  &--right {
+    max-width: 430px;
+  }
+}
+
+.footer__info {
+  margin-bottom: 22px;
+}
+
+.quote__text {
+  margin-bottom: 29px;
+}
+.quote__author {
+  color: white;
+  font-style: italic;
+}

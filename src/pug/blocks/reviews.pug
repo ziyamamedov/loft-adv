@@ -1,0 +1,36 @@
+section.reviews#reviews
+  .container
+    
+    h2.section-title Что обо мне говорят
+    
+    .reviews__buttons
+      a(href="#").reviews__buttons-left
+        +icon("short-arrow","reviews__buttons-svg")
+      a(href="#").reviews__buttons-right
+        +icon("short-arrow","reviews__buttons-svg")
+    
+    ul.reviews__list
+      
+      li.reviews__item.review
+        .review__text
+          p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+        .review__author
+          .review__author-avatar
+            +image("content/avatars/review-avatar-1.jpg", "review__author-avatar-img")
+          .review__author-info
+            .review__author-name
+              h4 Ковальчук Дмитрий
+            .review__author-job
+              h5 Основатель Loftschool
+
+      li.reviews__item.review
+        .review__text
+          p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+        .review__author
+          .review__author-avatar
+            +image("content/avatars/review-avatar-2.jpg", "review__author-avatar-img")
+          .review__author-info
+            .review__author-name
+              h4 Владимир Сабанцев
+            .review__author-job
+              h5 Преподаватель

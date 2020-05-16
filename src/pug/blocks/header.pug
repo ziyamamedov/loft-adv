@@ -1,9 +1,15 @@
 include ../mixins.pug
+-
+  var socObj = {
+    "insta": "https://www.instagram.com/zicco1990/",
+    "vk": "https://vk.com/id4599601",
+    "github": "https://github.com/ziyamamedov"
+  };
 
 header.header
   .header__logo
     .logo= 'ЗМ'
   .header__menu
     +navigation('Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться')
-  .header__socials  
-    +socials('socials', 'insta', 'vk', 'github')
+  .header__socials
+      +socials('socials', socObj)

@@ -13,10 +13,9 @@ mixin navigation(...items)
         li.nav__item
           a.nav__item-link(href='#')= items[i]
 
-
-mixin socials(className, ...items)
+mixin socials(className, items)
   ul(class=className)
-    - for (var i = 0; i < items.length; i++)
+    each val, key in items
       li(class=`${className}__item`)
-        a(class=`${className}__link` href='#')
-          +icon(items[i], `${className}__icon`)
+        a(class=`${className}__link` href=val target="blank")
+          +icon(key, `${className}__icon`) 

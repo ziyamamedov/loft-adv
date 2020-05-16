@@ -1,0 +1,20 @@
+footer.footer
+  .container  
+    .footer__left
+      .copyright
+        .copyight__year &copy 2020
+        .copyright__info
+          h3.copyright__author Зия <br> Мамедов
+          .copyright__descr Личный сайт <br> веб-разработчика
+            
+    .footer__right
+      .footer__row
+        +navigation("Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться")
+      .footer__row
+        .footer__col.footer__col--left
+          .footer__info Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+          +socials('socials', socObj)
+        .footer__col.footer__col--right
+          .quote
+            .quote__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+            .quote__author Martin Golding

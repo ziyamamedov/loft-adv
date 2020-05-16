@@ -1,4 +1,4 @@
-section.works
+section.works.fullscreen-section#works
   .container
     h2.section-title.section-title--black Мои работы
     .works__content
@@ -7,12 +7,42 @@ section.works
           li.works__slide.works__slide--active.work
             .work__preview
               +image("content/work-previews/1.jpg", "work__preview-img")
+              
+              .works__pagination
+                - var pagItems = ['1', '2', '3'];
+                each item in pagItems
+                  if item == "1" 
+                    - var activeClass = "works__pagination-button--active";
+                  else
+                    - var activeClass = "";
+                  a(href="#" class = `works__pagination-button ${activeClass}`)
+                    .works__pagination-avatar
+                      +image( `content/work-previews/${item}.jpg`, "work__pagination-avatar-img")
+              
+              .works__arrows
+                a(href="#").works__arrows-left
+                  +icon("short-arrow","works__arrows-svg")
+                a(href="#").works__arrows-right
+                  +icon("short-arrow","works__arrows-svg")
+
             .work__descr
+              .work__number 1
               ul.work__tools
                 - var workTools = ["HTML", "CSS", "Javascript"];
                 each tool in workTools
                   li.work__tools-item 
                     h4 #{tool}
+              .work__title 
+                h3 Сайт школы образования
+              .work__info
+                p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              a(href="#").work__link
+                +icon("link", "work__link-svg")
+                .work__link-text Посмотреть сайт
+        
+
+
+
                     
 
 

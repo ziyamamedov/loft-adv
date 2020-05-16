@@ -1,0 +1,27 @@
+.socials {
+  display: flex;
+}
+.socials__item {
+  margin-right: 2.5rem;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__link {
+  display: block;
+  color: #656668;
+  &:hover {
+    color: $hover-color;
+  }
+  &:active {
+    color: $active-color;
+  }
+}
+.socials__icon {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+
+  transition: fill .2s;
+}
