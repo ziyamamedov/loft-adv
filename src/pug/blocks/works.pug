@@ -1,23 +1,24 @@
-section.works.fullscreen-section#works
+section.works#works
   .container
     h2.section-title.section-title--black Мои работы
     .works__content
       .works__slider-wrapper
-        ul.works__slider
-          li.works__slide.works__slide--active.work
+        .works__slider
+          .works__slide.works__slide--active.work
             .work__preview
               +image("content/work-previews/1.jpg", "work__preview-img")
               
-              .works__pagination
-                - var pagItems = ['1', '2', '3'];
+              ul.works__pagination
+                - var pagItems = ['1', '2', '3', '4'];
                 each item in pagItems
                   if item == "1" 
-                    - var activeClass = "works__pagination-button--active";
+                    - var activeClass = "works__pagination-item--active";
                   else
                     - var activeClass = "";
-                  a(href="#" class = `works__pagination-button ${activeClass}`)
-                    .works__pagination-avatar
-                      +image( `content/work-previews/${item}.jpg`, "work__pagination-avatar-img")
+                  li(class = `works__pagination-item ${activeClass}`)
+                    a(href="#").works__pagination-button
+                      .works__pagination-avatar
+                        +image( `content/work-previews/${item}.jpg`, "work__pagination-avatar-img")
               
               .works__arrows
                 a(href="#").works__arrows-left

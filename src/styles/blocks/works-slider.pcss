@@ -1,35 +1,42 @@
 .work {
   display: flex;
-  justify-content: space-between;
 }
 .work__preview {
+  flex-shrink: 0;
   position: relative;
-  max-width: 80vw;
+  width: 54.5vw;
+  height: 30.5vw;
   z-index: 5;
+
+  margin-right: 8.5vw;
+
+  .work__preview-img {
+    width: 100%;
+  }
 }
 .work__number {
-  font-size: 300px;
+  font-size: 380px;
   font-weight: 800;
   color: #e6e6e6;
   
   position: absolute;
   line-height: 0.8;
-  top: 0;
+  top: 18%;
   right: 100%;
   transform: translate(35px, -20px);
+  
+  @include desktop() {
+    font-size: 300px;
+    top: 0;
+  }
 }
 
 .work__descr {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   position: relative;
-  max-width: 35vw;
-  margin-left: 8vw;
+  max-width: 350px;
 }
 .work__tools {
-  display: flex;
+  display: flex;margin-bottom: 38px;
 }
 .work__tools-item {
   padding: 15px 20px;
@@ -43,15 +50,18 @@
 }
 
 .work__title {
+  margin-bottom: 40px;
   h3 {
     font-size: 30px;
     font-weight: bold;
   }
 }
 .work__info {
+  margin-bottom: 40px;
   p {
     color: rgba(51, 60, 73, .7);
     font-weight: 600;
+    line-height: 1.8;
   }
 }
 .work__link {
@@ -75,24 +85,38 @@
   fill:currentColor;
   margin-right: 20px;
 }
+
+//Pagination styling
 .works__pagination {
   position: absolute;
   bottom: 10%;
   right: 0;
-
+  width: 706px;
+  overflow: hidden;
   display: flex;
-}
-
-.works__pagination-button {
-  display: block;
-
-  &--active {
-    z-index: 15;
-    outline: #dc9322 solid 3px;
+  align-items: center;
+  
+  @media screen and (max-width: 1520px) {
+    width: 525px;
   }
 }
+
+.works__pagination-item {
+  &--active {
+    z-index: 15;
+    border: #dc9322 solid 3px;
+  }
+}
+.works__pagination-button {
+  display: block;
+}
 .works__pagination-avatar {
+  width: 175px;
   height: 100px;
+}
+.work__pagination-avatar-img {
+  width: 100%;
+  object-fit: cover;
 }
 
 
@@ -100,6 +124,8 @@
   position: absolute;
   bottom: 10%;
   left: 100%;
+  border: 3px solid transparent;
+  border-left: none;
 }
 .works__arrows-left, .works__arrows-right {
   display: flex;

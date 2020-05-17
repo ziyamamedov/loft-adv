@@ -67,5 +67,20 @@
   font-weight: normal;
   font-style: italic;
   margin-top: auto;
+  position: relative;
+
+  &:before {
+    content: '*';
+    font-size: 60px;
+    line-height: 1;
+    color: #db0200;
+    
+
+    position: absolute;
+    top: -10px;
+    left: -80px;
+    transform: rotate(10deg);
+    opacity: .1;
+  }
 }
 
