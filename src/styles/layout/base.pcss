@@ -34,7 +34,9 @@ body {
   width: 95%;
   height: 100%;
   // width: 1490px;
-
+  @include desktop {
+    max-width: 1080px;
+  }
   @include phones {
     width: 85%;
   }

@@ -1,30 +1,31 @@
 section.skills#skills
   .container
-    .skills__header
-      h2.skills__header-title Чем я могу быть полезен вам
-      .skills__header-info
-        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-    .skills__content
-      -
-        var skillsList = {
-            "Front-end": ["HTML5", "CSS3", "Javascript", "Jquery и Vue.js"],
-            "Workflow": ["Git", "Terminal", "Gulp", "Webpack"]
-        };
+    .skills__main
+      .skills__header
+        h2.skills__header-title Чем я могу быть полезен вам
+        .skills__header-info
+          p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .skills__content
+        -
+          var skillsList = {
+              "Front-end": ["HTML5", "CSS3", "Javascript", "Jquery и Vue.js"],
+              "Workflow": ["Git", "Terminal", "Gulp", "Webpack"]
+          };
 
-      ul.skills__list
-        each val, key in skillsList
-          li.skills__area
-            h3.skills__area-title #{key}
-            ul.skills__inner-list
-              each item in val
-                li.skills__item 
-                  h4 #{item}
-                  svg(viewBox="0 0 100 100").skill__circle-svg
-                    circle(cx="50" cy="50" r="40").skill__circle.skill__circle--inner
-                    circle(cx="50" cy="50" r="40" ref="circle" stroke="url(#gradient)" transform='rotate(180 50 50)').skill__circle.skill__circle--outer
-                    linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                      stop(offset="0%" stop-color="#db9022")
-                      stop(offset="100%" stop-color="#d47e1e")
+        ul.skills__list
+          each val, key in skillsList
+            li.skills__area
+              h3.skills__area-title #{key}
+              ul.skills__inner-list
+                each item in val
+                  li.skills__item 
+                    h4 #{item}
+                    svg(viewBox="0 0 100 100").skill__circle-svg
+                      circle(cx="50" cy="50" r="40").skill__circle.skill__circle--inner
+                      circle(cx="50" cy="50" r="40" ref="circle" stroke="url(#gradient)" transform='rotate(180 50 50)').skill__circle.skill__circle--outer
+                      linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                        stop(offset="0%" stop-color="#db9022")
+                        stop(offset="100%" stop-color="#d47e1e")
 
       
 

@@ -1,5 +1,5 @@
 .skills__area {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 .skills__area-title {
   font-size: 24px;
@@ -10,7 +10,7 @@
   display: flex;
 }
 .skills__item {
-  margin-right: 40px;
+  margin-right: 2.3vw;
   position: relative;
 
   &:last-child {
@@ -25,20 +25,24 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  @include desktop {
+    margin-right: 1.5vw;
+  }
 }
 
 .skill__circle-svg {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
 }
 .skill__circle {
   fill: transparent;
   &--inner {
     stroke: rgba(255, 255, 255, .1);
-    stroke-width: 4px;
+    stroke-width: 2px;
   }
   &--outer {
-    stroke-width: 10px;
+    stroke-width: 6px;
     stroke-dasharray: 251;
     stroke-dashoffset: 100;
   }

@@ -8,18 +8,25 @@
   .container {
     display: flex;
     justify-content: center;
+    @include desktop {
+      justify-content: flex-start;
+    }
   }
  
 }
 
 //Left column styles
 .user__col-left {
-  margin-right: 13vw;
+  margin-right: 8vw;
+  @include desktop {
+    margin-right: 14vw;
+  }
 }
 .user__avatar-wrapper {
-  margin-bottom: 76px;
+  margin-bottom: 65px;
   display: flex;
   justify-content: center;
+  padding-left: 66px;
 }
 .user__avatar {
   display: block;
@@ -42,7 +49,7 @@
 }
 .user__info-col-two {
   min-width: 200px;
-  padding-left: 20%;
+  padding-left: 28%;
 }
 
 //Right column styles 
@@ -62,12 +69,16 @@
 }
 .user__greetings {
   margin-bottom: 22px;
+
+}
+.user__what-i-do {
+  margin-bottom: 103px;
 }
 .user__about-site {
   font-weight: normal;
   font-style: italic;
-  margin-top: auto;
   position: relative;
+  line-height: 1.8;
 
   &:before {
     content: '*';
@@ -83,4 +94,5 @@
     opacity: .1;
   }
 }
+
 
