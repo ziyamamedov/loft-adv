@@ -7,7 +7,7 @@ section.works#works
           .works__slide.works__slide--active.work
             .work__preview
               +image("content/work-previews/1.jpg", "work__preview-img")
-              
+
               ul.works__pagination
                 - var pagItems = ['1', '2', '3', '4'];
                 each item in pagItems
@@ -25,9 +25,9 @@ section.works#works
                   +icon("short-arrow","works__arrows-svg")
                 a(href="#").works__arrows-right
                   +icon("short-arrow","works__arrows-svg")
-
+            
+            .work__number 1
             .work__descr
-              .work__number 1
               ul.work__tools
                 - var workTools = ["HTML", "CSS", "Javascript"];
                 each tool in workTools

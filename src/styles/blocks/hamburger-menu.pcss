@@ -1,0 +1,26 @@
+.hamburger {
+  display: none;
+
+  @include tablets {
+    display: initial;
+  }
+}
+
+.hamburger__btn {
+  background: none;
+  
+  &:active {
+    .hamburger__block {
+      background-color: $hover-color;
+    }
+  }
+}
+
+.hamburger__block {
+  width: 24px;
+  height: 4px;
+  margin-bottom: 4px;
+  background-color: white;
+
+  
+}

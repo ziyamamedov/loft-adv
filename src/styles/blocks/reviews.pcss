@@ -36,6 +36,9 @@
 .reviews__header {
   display: flex;
   margin-bottom: 90px;
+  @include tablets {
+    margin-bottom: 65px;
+  }
 }
 
 
@@ -78,6 +81,10 @@
   display: inline-flex;
   line-height: 1.9;
   padding-left: 2.8vw;
+
+  @include tablets {
+    padding-left: 0;
+  }
 }
 .reviews__item {
   max-width: 350px;
@@ -85,17 +92,24 @@
   position: relative;
   margin-left: 80px;
   margin-right: 4vw;
+  &:last-child {
+    margin-right: 0;
+  }
   &:before {
     content : "";
     display: block;
-    width: 80px;
-    height: 82px;
+    width: 30px;
+    height: 32px;
     background: svg-load('quote.svg', fill=#ffffff, width=100%, height=100%);
     opacity: .05;
 
     position: absolute;
     top: 0;
     right: 104%;
+  }
+
+  @include tablets {
+    margin-left: 45px;
   }
 } 
 .review__text {

@@ -1,8 +1,14 @@
 .work {
   display: flex;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 .work__preview {
-  flex-shrink: 0;
   position: relative;
   width: 54.5vw;
   height: 30.5vw;
@@ -19,7 +25,15 @@
     height: 29.5vw;
     margin-right: 9vw;
   }
+  @include tablets {
+    width: 81.6vw;
+    height: 45.9vw;
+    align-self: start;
+    margin-right: 0;
+    margin-bottom: 70px;
+  }
 }
+
 .work__number {
   font-size: 380px;
   font-weight: 800;
@@ -28,21 +42,34 @@
   position: absolute;
   line-height: 0.8;
   top: 18%;
-  right: 100%;
+  left: 50vw;
   transform: translate(35px, -20px);
   
   @include desktop() {
     font-size: 300px;
     top: 0;
+    left: 45vw;
+  }
+  @include tablets {
+    left: 72vw;
   }
 }
 
 .work__descr {
   position: relative;
   max-width: 350px;
+
+  @include tablets {
+    max-width: 500px;
+  }
 }
 .work__tools {
-  display: flex;margin-bottom: 38px;
+  display: flex;
+  margin-bottom: 38px;
+  @include tablets {
+    justify-content: center;
+    margin-bottom: 22px;
+  }
 }
 .work__tools-item {
   padding: 15px 20px;
@@ -53,6 +80,10 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include tablets {
+    margin-right: 22px;
+  }
 }
 
 .work__title {
@@ -61,6 +92,9 @@
     font-size: 30px;
     font-weight: bold;
   }
+  @include tablets {
+    margin-bottom: 25px;
+  }
 }
 .work__info {
   margin-bottom: 40px;
@@ -68,6 +102,10 @@
     color: rgba(51, 60, 73, .7);
     font-weight: 600;
     line-height: 1.8;
+  }
+
+  @include tablets {
+    margin-bottom: 20px;
   }
 }
 .work__link {
@@ -84,6 +122,9 @@
     color: #262e55;
   }
 
+  @include tablets {
+    justify-content: center;
+  }
 }
 .work__link-svg {
   width: 17px;
@@ -103,6 +144,14 @@
   align-items: center;
   
   @media screen and (max-width: 1520px) {
+    width: 525px;
+  }
+  
+  @media screen and (max-width: 1060px) {
+    width: 350px;
+  }
+
+  @include tablets {
     width: 525px;
   }
 }
@@ -140,6 +189,13 @@
   width: 50px;
   background: #353e4e;
   color: white;
+  
+  &:hover {
+    background-color: $hover-color;
+  }
+  &:active {
+    background-color: $active-color;
+  }
 }
 .works__arrows-svg {
   width: 12px;

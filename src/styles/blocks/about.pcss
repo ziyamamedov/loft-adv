@@ -21,12 +21,21 @@
   @include desktop {
     margin-right: 14vw;
   }
+  @include tablets {
+    margin-right: 8vw;
+  }
 }
 .user__avatar-wrapper {
   margin-bottom: 65px;
   display: flex;
   justify-content: center;
   padding-left: 66px;
+
+  @include tablets {
+    margin-bottom: 50px;
+    padding-left: 0;
+    justify-content: flex-start;
+  }
 }
 .user__avatar {
   display: block;
@@ -50,6 +59,9 @@
 .user__info-col-two {
   min-width: 200px;
   padding-left: 28%;
+  @include tablets {
+    padding-left: 13%;
+  }
 }
 
 //Right column styles 
@@ -65,14 +77,24 @@
   .section-title {
     color: white;
     margin-bottom: 30px;
+
+    @include tablets {
+      margin-bottom: 50px;
+    }
   }
 }
 .user__greetings {
   margin-bottom: 22px;
 
+  @include tablets {
+    margin-bottom: 10px;
+  }
 }
 .user__what-i-do {
   margin-bottom: 103px;
+  @include tablets {
+    margin-bottom: 65px;
+  }
 }
 .user__about-site {
   font-weight: normal;

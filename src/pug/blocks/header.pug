@@ -9,7 +9,17 @@ include ../mixins.pug
 header.header
   .header__logo
     .logo= 'ЗМ'
-  .header__menu
+  //to open menu on mbiles add .header__menu--active class
+  .header__menu#hamMenu
+    .header__menu-cls-btn#hamClsBtn
+      +icon("Cross","header__menu-cls-btn-svg")
     +navigation('Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться')
+    .header__menu-socials
+      +socials('socials', socObj)
   .header__socials
       +socials('socials', socObj)
+  .hamburger
+    button.hamburger__btn#hamBtn
+      .hamburger__block
+      .hamburger__block
+      .hamburger__block

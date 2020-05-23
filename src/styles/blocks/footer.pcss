@@ -1,5 +1,5 @@
 .footer {
-  background: #222427;
+  background: $footer;
   color: white;
   .container {
     padding: 80px 0;
@@ -8,6 +8,8 @@
   &__left{
     margin-right: 7.8vw;
     @include desktop {margin-right: 10vw;}
+    @include tablets {margin-right: 12.3vw;}
+
   }
   &__right {
     flex: 1;
@@ -17,7 +19,9 @@
     height: 50px;
     align-items: flex-start;
   }
-
+  .socials__item {
+    margin-right: 18px;
+  }
   .socials__link {
     padding: 14px;
     display: flex;
@@ -25,6 +29,10 @@
     justify-content: center;
     border: 1px solid currentColor;
     border-radius: 50%;
+  }
+
+  .nav__list {
+    flex-wrap: wrap;
   }
 }
 

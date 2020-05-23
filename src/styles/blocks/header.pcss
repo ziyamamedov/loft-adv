@@ -3,9 +3,99 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+
+  @include tablets {
+    justify-content: flex-start;
+    padding-top: 73px;
+
+    .header__socials {
+      margin-left: auto;
+      margin-right: 11vw;
+    }
+  }
+  @include phones {
+    justify-content: space-between;
+    .header__socials {
+      display: none;
+    }
+  }
 }
 
 .logo {
   font-size: 2.25rem;
   font-weight: 800;
+}
+
+.header__menu {
+  margin: 0 1.5vw;
+  @include tablets {
+    margin: 0;
+    height: 100vh;
+    width: 42vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    
+    background-color: #414c63;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 80px;
+
+    transition: transform .2s;
+    &--active {
+      transform: translateX(0);
+    }
+
+    .nav {
+      margin-bottom: 70px;
+    }
+    .nav__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav__item {
+      height: auto;
+      margin-bottom: 20px;
+      font-size: 20.8px;
+      font-weight: bold;
+      margin-right: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+  .socials__link {
+    color: white;
+  }
+}
+
+.header__menu-cls-btn {
+  display: none;
+
+  @include tablets {
+    display: initial;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+  }
+}
+.header__menu-cls-btn-svg {
+  width: 1.43rem;
+  height: 1.43rem;
+  fill: currentColor;
+}
+.header__menu-socials {
+  display: none;
+  @include tablets {
+    display: initial;
+  }
 }

@@ -1,10 +1,18 @@
 .skills__area {
   margin-bottom: 35px;
+  @include tablets {
+    margin-bottom: 40px;
+  }
 }
 .skills__area-title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 30px;
+
+  @include tablets {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 .skills__inner-list {
   display: flex;
@@ -17,7 +25,7 @@
     margin-right: 0;
   }
   h4 {
-    font-size: 18px;
+    font-size: 1vw;
     font-weight: bold;
     color: $text-color;
     position: absolute;
@@ -28,12 +36,31 @@
 
   @include desktop {
     margin-right: 1.5vw;
+
+    h4 {
+      font-size: 1.4vw;
+    }
+  }
+
+  @include tablets {
+    h4 {
+      font-size: 2.09vw;
+    }
   }
 }
 
 .skill__circle-svg {
-  width: 160px;
-  height: 160px;
+  width: 9vw;
+  height: 9vw;
+
+  @include desktop {
+    width: 13.4vw;
+    height: 13.4vw;
+  }
+  @include tablets {
+    height: 18vw;
+    width: 18vw;
+  }
 }
 .skill__circle {
   fill: transparent;

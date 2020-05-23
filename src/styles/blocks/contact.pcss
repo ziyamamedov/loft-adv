@@ -3,6 +3,11 @@
   .section-title {
     color: white;
     margin-bottom: 80px;
+
+    @include tablets {
+      text-align: center;
+      margin-bottom: 52px;
+    }
   }
 }
 .contact__form {
@@ -16,6 +21,10 @@
   margin-bottom: 38px;
   &:last-child {
     margin-bottom: 0;
+
+    @include tablets {
+      justify-content: center;
+    }
   }
   &--bigger-margin {
     margin-bottom: 75px;
@@ -36,6 +45,10 @@
   font-weight: 600;
   color: $text-color;
   margin-bottom: 5px;
+
+  @include tablets {
+    padding-left: 6.5vw;
+  }
 }
 .form__elem {
   display: flex;

@@ -2,6 +2,7 @@
   position: relative;
   background: url('~images/content/skills-bg.jpg') center center / cover no-repeat;
   color: white;
+  min-height: 100vh;
   .container {
     display: flex;
     justify-content: flex-start;
@@ -19,21 +20,54 @@
   &-img {
     width: 100%;
   }
+
+  @include tablets {
+    transform-origin: left bottom;
+    transform: rotate(-90deg) translateY(50%);
+
+    left: 50%;
+  }
 }
 .skills__main{
+  display: flex;
+  flex-direction: column;
   margin-left: 28vw;
+  z-index: 10;
   @include desktop {
     margin-left: 24vw;
   }
+  @media screen and (max-width: 1124px) {
+    margin-left: 16vw;
+  }
+  @include tablets {
+    width: 100%;
+    margin-left: 0;
+  }
+  
 }
 .skills__header {
   max-width: 600px;
   margin-bottom: 85px;
+  display: flex;
+  flex-direction: column;
+  @include tablets {
+    align-self: center;
+    max-width: 550px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 }
 .skills__header-title {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 50px;
+
+  @include tablets {
+    max-width: 380px;
+    margin-bottom: 18px;
+    
+  }
 }
 .skills__header-info {
   line-height: 1.8;
@@ -44,4 +78,8 @@
   display: flex;
   justify-content: center;
   padding-left: 7vw;
+
+  @include tablets {
+    padding-left: 0;
+  }
 }
