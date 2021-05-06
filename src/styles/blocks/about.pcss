@@ -11,6 +11,9 @@
     @include desktop {
       justify-content: flex-start;
     }
+    @include phones {
+      flex-direction: column;
+    }
   }
  
 }
@@ -24,6 +27,10 @@
   @include tablets {
     margin-right: 8vw;
   }
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
 }
 .user__avatar-wrapper {
   margin-bottom: 65px;
@@ -35,6 +42,10 @@
     margin-bottom: 50px;
     padding-left: 0;
     justify-content: flex-start;
+  }
+  @include phones {
+    justify-content: center;
+    margin-bottom: 16px;
   }
 }
 .user__avatar {
@@ -52,6 +63,9 @@
 }
 .user__info-col-one, .user__info-col-two {
   padding: 7px 0;
+  @include phones {
+    padding: 6px 0;
+  }
 }
 .user__info-col-one {
   opacity: .15;
@@ -61,6 +75,9 @@
   padding-left: 28%;
   @include tablets {
     padding-left: 13%;
+  }
+  @include phones {
+    padding-left: 23%;
   }
 }
 
@@ -81,6 +98,9 @@
     @include tablets {
       margin-bottom: 50px;
     }
+    @include phones {
+      margin-bottom: 38px;
+    }
   }
 }
 .user__greetings {
@@ -94,6 +114,10 @@
   margin-bottom: 103px;
   @include tablets {
     margin-bottom: 65px;
+  }
+  @include phones {
+    line-height: 1.8;
+    margin-bottom: 40px;
   }
 }
 .user__about-site {
@@ -114,6 +138,9 @@
     left: -80px;
     transform: rotate(10deg);
     opacity: .1;
+    @include phones {
+      left: -2.3rem;
+    }
   }
 }
 

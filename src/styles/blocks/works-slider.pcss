@@ -7,6 +7,9 @@
     align-items: center;
     text-align: center;
   }
+  @include phones {
+    text-align: left;
+  }
 }
 .work__preview {
   position: relative;
@@ -53,6 +56,9 @@
   @include tablets {
     left: 72vw;
   }
+  @include phones {
+    display: none;
+  }
 }
 
 .work__descr {
@@ -95,6 +101,14 @@
   @include tablets {
     margin-bottom: 25px;
   }
+  
+  @include phones {
+    margin-bottom: 16px;
+    h3{
+      font-size: 1.72rem;
+    }
+    
+  }
 }
 .work__info {
   margin-bottom: 40px;
@@ -106,6 +120,10 @@
 
   @include tablets {
     margin-bottom: 20px;
+  }
+
+  @include phones {
+    margin-bottom: 1.7rem;
   }
 }
 .work__link {
@@ -124,6 +142,10 @@
 
   @include tablets {
     justify-content: center;
+  }
+
+  @include phones {
+    justify-content: flex-start;
   }
 }
 .work__link-svg {
@@ -154,6 +176,9 @@
   @include tablets {
     width: 525px;
   }
+  @include phones {
+   display: none;
+  }
 }
 .works__pagination-item {
   &--active {
@@ -180,6 +205,12 @@
   left: 100%;
   border: 3px solid transparent;
   border-left: none;
+
+  @include phones {
+    left: unset;
+    right: 0;
+    border: none;
+  }
 }
 .works__arrows-left, .works__arrows-right {
   display: flex;

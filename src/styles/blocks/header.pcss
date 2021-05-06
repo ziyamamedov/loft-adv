@@ -73,6 +73,9 @@
       }
     }
   }
+  @include phones {
+    width: 100vw;
+  }
   .socials__link {
     color: white;
   }
@@ -80,7 +83,10 @@
 
 .header__menu-cls-btn {
   display: none;
-
+  cursor: pointer;
+  &:hover {
+    color: $hover-color;
+  }
   @include tablets {
     display: initial;
     position: absolute;

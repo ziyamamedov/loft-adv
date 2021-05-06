@@ -3,6 +3,9 @@
   @include tablets {
     margin-bottom: 40px;
   }
+  @include phones {
+    margin-bottom: 48px;
+  }
 }
 .skills__area-title {
   font-size: 24px;
@@ -16,6 +19,9 @@
 }
 .skills__inner-list {
   display: flex;
+  @include phones {
+    flex-wrap: wrap;
+  }
 }
 .skills__item {
   margin-right: 2.3vw;
@@ -47,6 +53,13 @@
       font-size: 2.09vw;
     }
   }
+
+  @include phones {
+    margin-right: 0;
+    h4 {
+      font-size: 2.09vw;
+    }
+  }
 }
 
 .skill__circle-svg {
@@ -60,6 +73,10 @@
   @include tablets {
     height: 18vw;
     width: 18vw;
+  }
+  @include phones {
+    height: 40vw;
+    width: 40vw;
   }
 }
 .skill__circle {
